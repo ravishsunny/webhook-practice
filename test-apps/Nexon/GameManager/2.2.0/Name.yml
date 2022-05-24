@@ -1,9 +1,9 @@
 # MSIX Conversion Template
-PackageName: Nexon Game Manager
+PackageName: Demo package
 
 PackageVersion: 2.1.1
 
-PublisherName: NEXON America Inc.
+PublisherName: Test publisher
 
 EligibleForConversion: Yes
 
