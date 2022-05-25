@@ -1,0 +1,55 @@
+# MSIX Conversion Template
+PackageName: Dashlane
+
+PackageVersion: 6.4444.4.555
+
+PublisherName: Dashlane Inc.
+
+EligibleForConversion: Yes
+
+ConversionStatus: Failed
+
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: Registry issues in Procmon
+
+  - SequenceNumber: 2
+    Issue:
+      Description: There were create file errors in process monitor
+    Fix:
+      FixType: PSF
+      Reference: https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup
+      FixDetails:
+        applications:
+          - id: DASHLANE
+            executable: Dashlane/bin/Dashlane.exe
+            workingDirectory: Dashlane/bin/
+        processes:
+          - executable: DashlaneLauncher
+            fixups:
+              - dll: FileRedirectionFixup.dll
+                config:
+                  redirectedPaths:
+                    packageRelative:
+                      - base: Dashlane/Data/
+                        patterns:
+                          - .*\.tst
+                      - base: Dashlane/bin/
+                        patterns:
+                          - .*
+                          
+AdditionalComments:
+  - Tried RegLegacyFixup didn't work. 
+
+Edition: Windows 10 Enterprise Evaluation
+
+MinimumOSVersion: 20H2
+
+MinimumOSBuild: 19042.1266
+
+Architecture: 64
+
+MSIXConversionToolVersion: 1.2021.709.0
+
+TemplateVersion: 1.0.0
