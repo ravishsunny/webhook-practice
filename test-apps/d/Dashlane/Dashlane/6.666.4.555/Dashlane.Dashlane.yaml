@@ -22,7 +22,7 @@ RemediationApproach:
       Reference: https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup
       FixDetails:
         applications:
-          - id: DASHLANE
+          - id: DASHLANE_APP
             executable: Dashlane/bin/Dashlane.exe
             workingDirectory: Dashlane/bin/
         processes:
