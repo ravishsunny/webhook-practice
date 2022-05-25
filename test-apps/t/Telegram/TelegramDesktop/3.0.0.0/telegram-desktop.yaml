@@ -7,7 +7,7 @@ PublisherName: Telegram FZ-LLC
 
 EligibleForConversion: Yes
 
-ConversionStatus: Converted With Issues
+ConversionStatus: Success
 
 RemediationApproach:
   - SequenceNumber: 1
