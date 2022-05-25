@@ -1,13 +1,13 @@
 # MSIX Conversion Template
 PackageName: Dashlane
 
-PackageVersion: 6.5555.4.555
+PackageVersion: 6.4444.4.555
 
 PublisherName: Dashlane Inc.
 
 EligibleForConversion: Yes
 
-ConversionStatus: Failed
+ConversionStatus: Success
 
 RemediationApproach:
   - SequenceNumber: 1
