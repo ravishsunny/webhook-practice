@@ -7,7 +7,7 @@ PublisherName: Twitch Interactive, Inc.
 
 EligibleForConversion: Yes
 
-ConversionStatus: Failed
+ConversionStatus: Success
 
 RemediationApproach:
   - SequenceNumber: 1
