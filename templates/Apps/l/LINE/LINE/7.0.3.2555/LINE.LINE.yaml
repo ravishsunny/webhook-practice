@@ -26,24 +26,23 @@ RemediationApproach:
       FixType: PSF
       Reference: https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup
       FixDetails:
-        PSFConfig:
-          applications:
-            - id: LINELAUNCHER
-              executable: LINE/bin/LineLauncher.exe
-              workingDirectory: LINE/bin/
-          processes:
-            - executable: LineLauncher
-              fixups:
-                - dll: FileRedirectionFixup.dll
-                  config:
-                    redirectedPaths:
-                      packageRelative:
-                        - base: LINE/Data/
-                          patterns:
-                            - .*\.tst
-                        - base: LINE/bin/
-                          patterns:
-                            - .*
+        applications:
+          - id: LINELAUNCHER
+            executable: LINE/bin/LineLauncher.exe
+            workingDirectory: LINE/bin/
+        processes:
+          - executable: LineLauncher
+            fixups:
+              - dll: FileRedirectionFixup.dll
+                config:
+                  redirectedPaths:
+                    packageRelative:
+                      - base: LINE/Data/
+                        patterns:
+                          - .*\.tst
+                      - base: LINE/bin/
+                        patterns:
+                          - .*
 
 MinimumPSFVersion: 1.0.200410.1
 
